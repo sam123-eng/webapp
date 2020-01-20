@@ -6,7 +6,7 @@ pipeline{
   stages{
     stage('initialize'){
       steps{
-        sh '''
+        bat '''
             echo "PATH=${PATH}"
             echo "M2_HOME=${M2_HOME}"
           '''
@@ -14,7 +14,7 @@ pipeline{
     }
     stage('build'){
       steps{
-        sh 'mvn clean package'
+        bat 'mvn clean package'
       }
     }
   }
