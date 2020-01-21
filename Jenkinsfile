@@ -19,7 +19,7 @@ pipeline{
     }
     stage('deploy-to-tomcat'){
        steps{
-          bat 'winscp -o StrictHostKeyChecking=no target/*.war ubuntu@15.206.171.244:/home/ubuntu/prod/apache-tomcat-8.5.39/webapps/webapp.war'
+          bat 'WinSCP -o StrictHostKeyChecking=no target/*.war ubuntu@15.206.171.244:/home/ubuntu/prod/apache-tomcat-8.5.39/webapps/webapp.war'
         }
      
     }
