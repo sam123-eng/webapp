@@ -17,7 +17,7 @@ pipeline{
 	        sh 'rm trufflehog || true'
 		sh 'docker pull gesellix/trufflehog'
 		sh 'docker run -t gesellix/trufflehog --json https://github.com/sam123-eng/webapp.git > trufflehog'
-		sh 'type trufflehog'
+		sh 'cat trufflehog'
 	    }
 	    }
     stage('build'){
