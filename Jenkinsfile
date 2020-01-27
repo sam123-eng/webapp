@@ -14,7 +14,7 @@ pipeline{
     }
     stage ('Check-Git-Secrets') {
 		    steps {
-	        sh 'del /f trufflehog'
+	        sh 'rm /f trufflehog'
 		sh 'docker pull gesellix/trufflehog'
 		sh 'docker run -t gesellix/trufflehog --json https://github.com/devopssecure/webapp.git > trufflehog'
 		sh 'type trufflehog'
